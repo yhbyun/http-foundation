@@ -302,10 +302,6 @@ class Request
 
         $components = parse_url($uri);
         if (false === $components) {
-            throw new \InvalidArgumentException(\sprintf('Malformed URI "%s".', $uri));
-        }
-
-        if (false === $components) {
             throw new BadRequestException('Invalid URI.');
         }
 
